@@ -18,4 +18,6 @@ public interface CategoryService {
     CategoryDto getCategory(Integer categoryId);
 
     List<CategoryDto> getCategories();
+
+    CategoryDto selectCategory(Integer  categoryDto);
 }
