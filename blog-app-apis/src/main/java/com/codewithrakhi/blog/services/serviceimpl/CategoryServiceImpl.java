@@ -66,5 +66,11 @@ public class CategoryServiceImpl implements CategoryService {
       List<CategoryDto> catDtos = categories.stream().map((cat)-> this.modelMapper.map(cat, CategoryDto.class)).collect(Collectors.toList());
 
         return catDtos;
+
+    }
+
+    @Override
+    public CategoryDto selectCategory(Integer categoryDto) {
+        return null;
     }
 }
