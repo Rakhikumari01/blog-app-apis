@@ -8,3 +8,4 @@ This is a basic blog application API.It contains the API's related to three enti
 ![image](https://github.com/Rakhikumari01/blog-app-apis/assets/87942751/b212862a-a2ed-4637-9dad-aac86342cfeb)
 
 # Sample Testing
+![image](https://github.com/Rakhikumari01/blog-app-apis/assets/87942751/68d30a3f-662f-4f50-b875-5a6d128089c2)
