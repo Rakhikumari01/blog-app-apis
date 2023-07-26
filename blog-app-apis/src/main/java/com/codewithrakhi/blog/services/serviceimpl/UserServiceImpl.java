@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 @Service
 
 public class UserServiceImpl implements UserService {
@@ -33,15 +34,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto updateUser(UserDto userDto, Integer userId) {
 
-        User user = this.userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User","Id",userId));
+        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "Id", userId));
 
-          user.setName(userDto.getName());
-          user.setEmail(userDto.getEmail());
-          user.setPassword(userDto.getPassword());
-          user.setAbout(userDto.getAbout());
+        user.setName(userDto.getName());
+        user.setEmail(userDto.getEmail());
+        user.setPassword(userDto.getPassword());
+        user.setAbout(userDto.getAbout());
 
-          User updatedUser = this.userRepo.save(user);
-          UserDto userDto1 = this.userToDto(updatedUser);
+        User updatedUser = this.userRepo.save(user);
+        UserDto userDto1 = this.userToDto(updatedUser);
 
         return userDto1;
     }
@@ -49,7 +50,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto getUserById(Integer userId) {
 
-        User user = this.userRepo.findById(userId).orElseThrow(()-> new ResourceNotFoundException("User","Id", userId));
+        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "Id", userId));
 
 
         return this.userToDto(user);
@@ -68,32 +69,31 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(Integer userId) {
 
-       User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User","Id", userId));
+        User user = this.userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "Id", userId));
 
         this.userRepo.delete(user);
 
     }
 
 
-    private User dtoToUser(UserDto userDto)
-    {
+    private User dtoToUser(UserDto userDto) {
 
 
-         User user= this.modelMapper.map(userDto, User.class );
-         //user.setId(userDto.getId());
-         //user.setName(userDto.getName());
-         //user.setEmail(userDto.getEmail());
-         //user.setAbout(userDto.getAbout());
-         //user.setPassword(userDto.getPassword());
+        User user = this.modelMapper.map(userDto, User.class);
+        //user.setId(userDto.getId());
+        //user.setName(userDto.getName());
+        //user.setEmail(userDto.getEmail());
+        //user.setAbout(userDto.getAbout());
+        //user.setPassword(userDto.getPassword());
 
-         return user;
+        return user;
 
     }
 
 
     public UserDto userToDto(User user) {
 
-        UserDto userDto = this.modelMapper.map(user,UserDto.class);
+        UserDto userDto = this.modelMapper.map(user, UserDto.class);
 
         return userDto;
 

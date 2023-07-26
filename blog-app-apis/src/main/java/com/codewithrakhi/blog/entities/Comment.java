@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name ="comments")
+@Table(name = "comments")
 @Getter
 @Setter
 public class Comment {
@@ -18,9 +18,9 @@ public class Comment {
     private String content;
 
     @ManyToOne
-     private Post post;
+    private Post post;
 
 
-     //private User user;
+    //private User user;
 
 }

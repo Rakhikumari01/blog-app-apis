@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface CategoryService {
 
-  //create
+    //create
     CategoryDto createCategory(CategoryDto categoryDto);
 
     CategoryDto updateCategory(CategoryDto categoryDto, Integer categoryId);
@@ -19,5 +19,5 @@ public interface CategoryService {
 
     List<CategoryDto> getCategories();
 
-    CategoryDto selectCategory(Integer  categoryDto);
+    CategoryDto selectCategory(Integer categoryDto);
 }

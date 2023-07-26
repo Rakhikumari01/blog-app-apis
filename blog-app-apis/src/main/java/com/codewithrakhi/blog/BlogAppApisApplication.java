@@ -8,16 +8,15 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class BlogAppApisApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(BlogAppApisApplication.class, args);
-	}
+        SpringApplication.run(BlogAppApisApplication.class, args);
+    }
 
-	@Bean
-     public ModelMapper  modelMapper()
-	{
+    @Bean
+    public ModelMapper modelMapper() {
 
-		return new ModelMapper();
-	 }
+        return new ModelMapper();
+    }
 
 }

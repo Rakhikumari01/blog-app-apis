@@ -18,7 +18,7 @@ public interface PostService {
     void deletePost(Integer postId);
 
     //getall
-    PostResponse getAllPost(Integer pageNumber, Integer pageSize,String sortBy,String sortDir);
+    PostResponse getAllPost(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
 
     //get single
     PostDto getPostById(Integer postId);
@@ -33,7 +33,6 @@ public interface PostService {
 
     //search
     List<PostDto> searchPosts(String keyword);
-
 
 
 }

@@ -28,6 +28,6 @@ public class PostDto {
 
     private UserDto user;
 
-   // this function will help to automatically fetch comment when we will fetch post
-   private Set<CommentDto> comments = new HashSet<>();
+    // this function will help to automatically fetch comment when we will fetch post
+    private Set<CommentDto> comments = new HashSet<>();
 }
